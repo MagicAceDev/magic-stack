@@ -1,0 +1,12 @@
+---
+export const prerender = false
+
+import MainLayout from '../layouts/main-layout.astro'
+---
+
+<MainLayout
+  title='Dashboard'
+  seo={{ description: 'User dashboard with session data' }}
+>
+  <h1>{Astro.locals.user?.name}</h1>
+</MainLayout>

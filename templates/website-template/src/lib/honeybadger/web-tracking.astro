@@ -1,0 +1,31 @@
+---
+import { PUBLIC_HONEYBADGER_KEY, REVISION } from 'astro:env/client'
+if (!PUBLIC_HONEYBADGER_KEY || !REVISION) {
+  throw new Error(
+    'Honeybadger API key and revision must be set in environment variables.'
+  )
+}
+
+const environment = 'production' // import.meta.env.DEV ? 'development' : 'production'
+---
+
+<script
+  src='//js.honeybadger.io/v6.11/honeybadger.min.js'
+  type='text/partytown'
+></script>
+
+<script
+  is:inline
+  type='text/partytown'
+  define:vars={{
+    apiKey: PUBLIC_HONEYBADGER_KEY,
+    environment,
+    revision: REVISION,
+  }}
+>
+  Honeybadger.configure({
+    apiKey,
+    environment,
+    revision,
+  })
+</script>

@@ -1,0 +1,39 @@
+---
+import { Head } from 'astro-capo'
+import { SEO, type SEOProps } from 'astro-seo'
+import '@styles/global.css'
+import PostHog from '@lib/posthog/web-tracking.astro'
+import HoneyBadger from '@lib/honeybadger/web-tracking.astro'
+
+interface Props {
+  title: string
+  seo: Omit<SEOProps, 'title'>
+}
+const { title, seo } = Astro.props as Props
+---
+
+<html lang='en'>
+  <Head>
+    <meta charset='utf-8' />
+    <link
+      rel='icon'
+      type='image/svg+xml'
+      href='/favicon.svg'
+    />
+    <meta
+      name='viewport'
+      content='width=device-width'
+    />
+    <title>{title}</title>
+    <link
+      rel='sitemap'
+      href='/sitemap-index.xml'
+    />
+    <SEO {...seo} />
+    <PostHog />
+    <HoneyBadger />
+  </Head>
+  <body>
+    <slot />
+  </body>
+</html>
