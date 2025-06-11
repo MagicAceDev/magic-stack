@@ -1,3 +1,9 @@
 ---
-
+import MainLayout from "@/layouts/main-layout.astro";
+import { LoginForm } from "@/components/login-form";
 ---
+<MainLayout title="Login">
+    <div class="h-screen flex items-center justify-center">
+        <LoginForm client:load />
+    </div>
+</MainLayout>

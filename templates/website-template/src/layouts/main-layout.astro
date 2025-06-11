@@ -4,10 +4,11 @@ import { SEO, type SEOProps } from 'astro-seo'
 import '@styles/global.css'
 import PostHog from '@lib/posthog/web-tracking.astro'
 import HoneyBadger from '@lib/honeybadger/web-tracking.astro'
+import ThemeToggle from '@/components/ui/theme-toggle/theme-toggle.astro'
 
 interface Props {
   title: string
-  seo: Omit<SEOProps, 'title'>
+  seo?: Omit<SEOProps, 'title'>
 }
 const { title, seo } = Astro.props as Props
 ---
@@ -33,7 +34,8 @@ const { title, seo } = Astro.props as Props
     <PostHog />
     <HoneyBadger />
   </Head>
-  <body>
+  <body class="bg-background text-foreground">
+    <ThemeToggle />
     <slot />
   </body>
 </html>
