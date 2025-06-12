@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import type { CodegenConfig } from '@graphql-codegen/cli'
 import { loadEnv } from 'vite'
 

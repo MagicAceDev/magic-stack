@@ -9,7 +9,7 @@ if (!PUBLIC_POSTHOG_KEY || !PUBLIC_POSTHOG_HOST) {
 ---
 
 <script
-  type="text/partytown"
+  type='text/partytown'
   is:inline
   define:vars={{
     PUBLIC_POSTHOG_KEY,
@@ -61,6 +61,8 @@ if (!PUBLIC_POSTHOG_KEY || !PUBLIC_POSTHOG_HOST) {
       }),
       (e.__SV = 1))
   })(document, window.posthog || [])
+
+  /* eslint-disable-next-line no-undef */
   posthog.init(PUBLIC_POSTHOG_KEY, {
     api_host: PUBLIC_POSTHOG_HOST,
     defaults: '2025-05-24',

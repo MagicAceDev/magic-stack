@@ -19,21 +19,21 @@ A modern, batteries-included website template built with Astro, React, Tailwind 
 
 ## Features
 
-| Feature                                      | Status        |
-|----------------------------------------------|---------------|
-| Astro + React integration                    | ✅ Built      |
-| Tailwind CSS + Prettier plugin               | ✅ Built      |
-| Drizzle ORM (Turso/LibSQL)                   | ✅ Built      |
-| Hygraph CMS integration (TypeScript support) | 🏗️ WIP        |
-| Authentication (Better Auth)                 | 🏗️ WIP        |
-| Honeybadger error monitoring                 | ✅ Built      |
-| PostHog analytics                            | ✅ Built      |
-| Linting (ESLint, Stylelint, Prettier)        | ✅ Built      |
-| Husky + Lint-Staged pre-commit QA            | ✅ Built      |
-| Commitizen (conventional commits)            | ⏳ Not started|
-| Payments integration                         | ⏳ Not started|
-| VSCode config auto-setup                     | ⏳ Not started|
-| Component Generator Scripts                  | ⏳ Not started|
+| Feature                                      | Status         |
+| -------------------------------------------- | -------------- |
+| Astro + React integration                    | ✅ Built       |
+| Tailwind CSS + Prettier plugin               | ✅ Built       |
+| Drizzle ORM (Turso/LibSQL)                   | ✅ Built       |
+| Hygraph CMS integration (TypeScript support) | 🏗️ WIP         |
+| Authentication (Better Auth)                 | 🏗️ WIP         |
+| Honeybadger error monitoring                 | ✅ Built       |
+| PostHog analytics                            | ✅ Built       |
+| Linting (ESLint, Stylelint, Prettier)        | ✅ Built       |
+| Husky + Lint-Staged pre-commit QA            | ✅ Built       |
+| Commitizen (conventional commits)            | ⏳ Not started |
+| Payments integration                         | ⏳ Not started |
+| VSCode config auto-setup                     | ⏳ Not started |
+| Component Generator Scripts                  | ⏳ Not started |
 
 ## Getting Started
 

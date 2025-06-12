@@ -1,21 +1,24 @@
-import { Button } from "@/components/ui/button"
+import { Button } from '@/components/ui/button'
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { cn } from "@/lib/utils"
+} from '@/components/ui/card'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
+import { cn } from '@/lib/utils'
 
 export function LoginForm({
   className,
   ...props
-}: React.ComponentProps<"div">) {
+}: React.ComponentProps<'div'>) {
   return (
-    <div className={cn("flex flex-col gap-6", className)} {...props}>
+    <div
+      className={cn('flex flex-col gap-6', className)}
+      {...props}
+    >
       <Card>
         <CardHeader>
           <CardTitle>Login to your account</CardTitle>
@@ -25,37 +28,47 @@ export function LoginForm({
         </CardHeader>
         <CardContent>
           <form>
-            <div className="flex flex-col gap-6">
-              <div className="grid gap-3">
-                <Label htmlFor="email">Email</Label>
+            <div className='flex flex-col gap-6'>
+              <div className='grid gap-3'>
+                <Label htmlFor='email'>Email</Label>
                 <Input
-                  id="email"
-                  type="email"
-                  placeholder="m@example.com"
+                  id='email'
+                  type='email'
+                  placeholder='m@example.com'
                   required
                 />
               </div>
-              <div className="grid gap-3">
-                <div className="flex items-center">
-                  <Label htmlFor="password">Password</Label>
+              <div className='grid gap-3'>
+                <div className='flex items-center'>
+                  <Label htmlFor='password'>Password</Label>
                   <a
-                    href="#"
-                    className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
+                    href='#'
+                    className='ml-auto inline-block text-sm underline-offset-4 hover:underline'
                   >
                     Forgot your password?
                   </a>
                 </div>
-                <Input id="password" type="password" required />
+                <Input
+                  id='password'
+                  type='password'
+                  required
+                />
               </div>
-              <div className="flex flex-col gap-3">
-                <Button type="submit" className="w-full">
+              <div className='flex flex-col gap-3'>
+                <Button
+                  type='submit'
+                  className='w-full'
+                >
                   Login
                 </Button>
               </div>
             </div>
-            <div className="mt-4 text-center text-sm">
-              Don&apos;t have an account?{" "}
-              <a href="/auth/register" className="underline underline-offset-4">
+            <div className='mt-4 text-center text-sm'>
+              Don&apos;t have an account?{' '}
+              <a
+                href='/auth/register'
+                className='underline underline-offset-4'
+              >
                 Sign up
               </a>
             </div>

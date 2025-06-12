@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import type { Config } from 'drizzle-kit'
 import { loadEnv } from 'vite'
 

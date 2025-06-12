@@ -16,5 +16,5 @@
       "@db/*": ["src/lib/db/*"],
       "@auth/*": ["src/lib/auth/*"]
     }
-  },
+  }
 }

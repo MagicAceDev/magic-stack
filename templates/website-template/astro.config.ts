@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 // @ts-check
 import node from '@astrojs/node'
 import partytown from '@astrojs/partytown'
@@ -29,7 +31,7 @@ export default defineConfig({
     partytown({
       config: {
         forward: ['Honeybadger.notify'],
-      }
+      },
     }),
     sitemap(), // Generate a sitemap for the site
     robotsTxt({

@@ -1,10 +1,15 @@
-import { envField } from 'astro/config';
-import { loadEnv } from 'vite';
+/* eslint-disable */
+
+import { envField } from 'astro/config'
+import { loadEnv } from 'vite'
 // Check if any environment variables are still set to default values
 const env = loadEnv(process.env.NODE_ENV!, process.cwd(), '')
 Object.entries(env).forEach(([key, value]) => {
-  if (value.includes('your_')) throw new Error(`Environment variable ${key} is still set to its default value. Please update it in your .env file.`);
-});
+  if (value.includes('your_'))
+    throw new Error(
+      `Environment variable ${key} is still set to its default value. Please update it in your .env file.`
+    )
+})
 
 export const envDefinition = {
   REVISION: envField.string({
