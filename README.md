@@ -38,28 +38,21 @@ magic-stack/
 
 ## Quick Start
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/MagicAceDev/magic-stack.git
-   cd magic-stack/templates/website-template
-   ```
-2. **Install dependencies**
-   ```bash
-   yarn install
-   # or
-   npm install
-   ```
-3. **Configure environment variables**
-   ```bash
-   cp .env.example .env
-   # Edit .env with your values
-   ```
-4. **Run the development server**
-   ```bash
-   yarn dev
-   # or
-   npm run dev
-   ```
+Use [degit](https://github.com/Rich-Harris/degit) to scaffold your project without git history:
+
+```bash
+npx degit MagicAceDev/magic-stack/templates/website-template my-project
+cd my-project
+yarn install
+yarn dev
+```
+
+### Notes
+- **degit supports branches/tags**: You can specify a version tag to scaffold a specific version.
+  ```bash
+  npx degit MagicAceDev/magic-stack/templates/website-template#v1.0.0 my-project
+  ```
+- **Template**: Replace `website-template` with the desired template name (e.g., `mobile-app` when available).
 
 ## Features
 
