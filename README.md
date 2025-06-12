@@ -19,7 +19,7 @@ magic-stack/
 ├── templates/          # Starter templates for different app types
 │   ├── website-template/   # Astro + React + TailwindCSS + More
 │   └── mobile-app/         # (Coming soon) React Native + Expo
-└── docs/               # (Planned) Detailed documentation
+└── docs/               # Detailed documentation
 ```
 
 ## Included Technologies (Website Template)
