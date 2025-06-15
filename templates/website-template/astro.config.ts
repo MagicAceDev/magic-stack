@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 // @ts-check
 import node from '@astrojs/node'
 import partytown from '@astrojs/partytown'

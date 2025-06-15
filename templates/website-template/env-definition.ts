@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import { envField } from 'astro/config'
 import { loadEnv } from 'vite'
 // Check if any environment variables are still set to default values

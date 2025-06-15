@@ -4,6 +4,7 @@ import json from '@eslint/json'
 import * as tsParser from '@typescript-eslint/parser'
 import eslintPluginAstro from 'eslint-plugin-astro'
 import eslintPluginJsxA11y from 'eslint-plugin-jsx-a11y'
+import globals from 'globals'
 
 export default [
   {
@@ -17,7 +18,16 @@ export default [
       '*.d.ts',
     ],
   },
-  js.configs.recommended,
+  {
+    ...js.configs.recommended,
+    languageOptions: {
+      ...js.configs.recommended.languageOptions,
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
+    },
+  },
   {
     files: ['**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}'],
     languageOptions: {
@@ -26,21 +36,18 @@ export default [
         project: 'tsconfig.json',
       },
       globals: {
-        window: 'readonly',
-        document: 'readonly',
-        localStorage: 'readonly',
-        Image: 'readonly',
-        setInterval: 'readonly',
-        clearInterval: 'readonly',
+        ...globals.browser,
+        ...globals.node,
+        React: 'readonly',
       },
     },
   },
-  json.configs.recommended,
-  css.configs.recommended,
   ...eslintPluginAstro.configs.recommended,
   {
     files: ['**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx,astro}'],
     plugins: eslintPluginJsxA11y.flatConfigs.recommended.plugins,
     rules: eslintPluginJsxA11y.flatConfigs.recommended.rules,
   },
+  json.configs.recommended,
+  css.configs.recommended,
 ]
