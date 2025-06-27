@@ -6,7 +6,7 @@ if (!PUBLIC_HONEYBADGER_KEY || !REVISION) {
   )
 }
 
-const environment = 'production' // import.meta.env.DEV ? 'development' : 'production'
+const environment = import.meta.env.DEV ? 'development' : 'production'
 ---
 
 <script
