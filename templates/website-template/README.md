@@ -25,7 +25,7 @@ A modern, batteries-included website template built with Astro, React, Tailwind 
 | Tailwind CSS + Prettier plugin               | ✅ Built       |
 | Drizzle ORM (Turso/LibSQL)                   | ✅ Built       |
 | Hygraph CMS integration (TypeScript support) | 🏗️ WIP         |
-| Authentication (Better Auth)                 | 🏗️ WIP         |
+| Authentication (Better Auth)                 | ✅ Built       |
 | Honeybadger error monitoring                 | ✅ Built       |
 | PostHog analytics                            | ✅ Built       |
 | Linting (ESLint, Stylelint, Prettier)        | ✅ Built       |
